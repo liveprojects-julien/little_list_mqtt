@@ -8,7 +8,9 @@
         eventsSrvc.$inject = [
             '$q', // promises service
             '$timeout', // timeout service
-            'moment' // does dates really well
+            'moment', // does dates really well
+            'mqttService',
+            'brokerDetails'
         ];
 
     function eventsSrvc(
@@ -23,12 +25,13 @@
         var NUM_DUMMY_EVENTS = 10;
 
 
-        var createEvent = function(name, date, postcode){
+        var createEvent = function(name, date, postcode, sensorVal){
 
             var result = {
                 name : name,
                 date : date,
-                postcode: postcode
+                postcode: postcode,
+                sensorVal: sensorVal
             }
             return result;
         }
@@ -39,10 +42,11 @@
             for(var index=0; index < numToCreate; index++){
 
                 var name = "event " + index;
-                var date = moment().add(index, "years").toDate();
+                var date = 10000;
                 var postcode = "M1 5GD";
+                var sensorVal = 420;
 
-                result.push(createEvent("event " + index, date, postcode));
+                result.push(createEvent("event " + index, date, postcode, sensorVal));
             }
             
             //  uncomment the below to test an error condition
