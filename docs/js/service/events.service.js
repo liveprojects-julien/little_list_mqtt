@@ -29,7 +29,7 @@
                 name : name,
                 date : date,
                 postcode: postcode,
-                sensor: sensor
+                sensor: sensor,
             }
             return result;
         }
@@ -41,8 +41,8 @@
 
                 var name = "event " + index;
                 var date = moment().add(index, "years").toDate();
-                var postcode = "M1 5GD";
-                var sensor = 420;
+                var postcode = "M15 6TT";
+                var sensor = "420";
 
                 result.push(createEvent("event " + index, date, postcode, sensor));
             }
