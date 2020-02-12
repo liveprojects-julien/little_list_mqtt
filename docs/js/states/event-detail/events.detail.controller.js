@@ -21,7 +21,7 @@
                 name: "no name",
                 date: new Date(),
                 postcode : "no location",
-                sensorVal: 0
+                sensor: 0
             }
          });
         
