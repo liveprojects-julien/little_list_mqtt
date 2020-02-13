@@ -1,4 +1,4 @@
-angular.module('app').directive('address', address);
+angular.module('starter').directive('address', address);
 
 function address() {
     return {

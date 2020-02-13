@@ -1,4 +1,4 @@
-angular.module('app').service('dataService', dataService);
+angular.module('starter').service('dataService', dataService);
 
 dataService.$inject = [
     '$http'
