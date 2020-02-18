@@ -23,13 +23,12 @@
         var NUM_DUMMY_EVENTS = 10;
 
 
-        var createEvent = function(name, date, postcode, sensor){
+        var createEvent = function(name, date, postcode){
 
             var result = {
                 name : name,
                 date : date,
-                postcode: postcode,
-                sensor: sensor,
+                postcode: postcode
             }
             return result;
         }
@@ -41,10 +40,9 @@
 
                 var name = "event " + index;
                 var date = moment().add(index, "years").toDate();
-                var postcode = "M15 6TT";
-                var sensor = "420";
+                var postcode = "M1 5GD";
 
-                result.push(createEvent("event " + index, date, postcode, sensor));
+                result.push(createEvent("event " + index, date, postcode));
             }
             
             //  uncomment the below to test an error condition
@@ -107,7 +105,7 @@
             return angular.copy(eventsArray[index]);
         }
 
-        
+
         return service;
 
     }

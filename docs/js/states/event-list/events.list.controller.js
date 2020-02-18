@@ -7,22 +7,18 @@
 
     control.$inject = [
         '$state',
-        'eventsSrvc',
-        'mqttService',
-        'brokerDetails'
+        'eventsSrvc'
         ];
     
     function control(
         $state,
-        eventsSrvc,
-        mqttService, 
-        brokerDetails
+        eventsSrvc
     ) {
         var vm = angular.extend(this, {
             names : []
          });
         
-        console.log(brokerDetails);
+
         
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
