@@ -8,7 +8,6 @@
     homepageCtrl.$inject = [
         '$scope',
         '$state',
-        'eventsSrvc',
         'mqttService',
         'brokerDetails'
         ];
@@ -16,13 +15,15 @@
     function homepageCtrl(
         $scope,
         $state,
-        eventsSrvc,
         mqttService,
         brokerDetails
     ) {
-        
         var vm = this;
-        //vm.test = "Select a Channel: ";
+
+        vm.update = function(){
+            
+            $state.go('car_control');
+        }
 
         //Initialises the range of channels that can be selected and the selected channel
         vm.channels = Array.apply(null, {
@@ -63,7 +64,7 @@
 
                 mqttService.connect(function (success, error) {
                     if (success) {
-                        $state.transitionTo('events_list',
+                        $state.transitionTo('car_control',
                             {
                                 channel: vm.channel,
                             });
@@ -76,6 +77,5 @@
             }
 
         }
-              
     }
 })();

@@ -4,13 +4,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Little List</title>
+    <title>Scalextric Team 1</title>
 
     <link href="manifest.json">
-
-    <!-- SPWA Styling -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- angularjs js -->
     <script src="lib/angular.js"></script>
@@ -31,27 +27,22 @@
     <script src="js/modules/main.module.js"></script>
 
     <!-- Controllers -->
-    <script src="js/states/event-list/events.list.controller.js"></script>
-    <script src="js/states/event-update/events.update.controller.js"></script>
-    <script src="js/states/event-detail/events.detail.controller.js"></script>
+    <script src="js/states/car.control/car.control.controller.js"></script>
     <script src="js/states/homepage/homepage.controller.js"></script>
-    <!-- Controllers2ElectricBogaloo -->
-    <script src="js/states/index/IndexViewCtrl.js"></script>
-    <script src="js/states/carControl/carControlCtrl.js"></script>
-   
-    <!--Directives-->
-    <script src="js/components/directives/ipValidationDirective.js"></script>
-    <!--Services-->
-    <script src="js/components/services/dataService.js"></script>
-    <script src="js/components/services/mqttService.js"></script>
-    <script src="js/components/services/events.service.js"></script>
-    <script src="js/components/services/moment.service.js"></script>
-    <!--Constants-->
-    <script src="js/components/constants/brokerDetails/brokerDetailsConstant.js"></script>
 
+    <!--constants-->
+    <script src="js/components/constants/brokerDetailsConstant.js"></script>
+
+    <!--services-->
+    <script src="js/components/services/mqttService.js"></script>
+    <script src="js/components/services/dataService.js"></script>
+
+    <!--directives-->
+    <script src="js/components/directives/ipValidationDirective.js"></script>
+    
   </head>
 
-  <body ng-app="starter">
+  <body ng-app="app">
     <nav class="navbar-light bg-light text-center">
       <h1>Scalextric Team 1</h1>
     </nav>

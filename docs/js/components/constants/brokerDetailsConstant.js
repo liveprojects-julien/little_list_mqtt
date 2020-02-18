@@ -1,1 +1,1 @@
-angular.module('starter').value('brokerDetails',{"UUID":"","HOST":"","PORT":"","USERNAME":"","PASSWORD":"","SSL":""});
+angular.module('app').value('brokerDetails',{"UUID":"","HOST":"","PORT":"","USERNAME":"","PASSWORD":"","SSL":""});

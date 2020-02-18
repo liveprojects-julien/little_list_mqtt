@@ -1,4 +1,4 @@
-angular.module('starter').service('mqttService', mqttService);
+angular.module('app').service('mqttService', mqttService);
 
 mqttService.$inject = [
 ];

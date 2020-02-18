@@ -2,15 +2,13 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 (function () {
-  angular.module('starter', [
+  angular.module('app', [
     'ui.router',// ADDED for page navigation
-    'momentjs', // ADDED used for dates
-    'eventsjs',  // ADDED our events module
     'mainjs'// ADDED for our states module
   ])
 
     .config(function ($urlRouterProvider){
-      $urlRouterProvider.otherwise('/events_list');
+      $urlRouterProvider.otherwise('/homepage');
     })
 
     .run(function ($state, $rootScope) {
@@ -19,8 +17,8 @@
         
         event.preventDefault();
 
-        $state.get('events_list').error = { code: 123, descriptions: 'Exception stack trace' }
-        return $state.go('events_list');
+        $state.get('homepage').error = { code: 123, descriptions: 'Exception stack trace' }
+        return $state.go('homepage');
       });
 
     })
