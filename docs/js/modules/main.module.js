@@ -47,7 +47,26 @@
           cache: false,
           url: '/car_control',
           templateUrl: 'js/states/car.control/car.control.html',
-          controller: 'carControlCtrl as vm'
+          controller: 'carControlCtrl as vm',
+          params: {
+            channel: null,
+            ip_address: null
+          },
+          //resolve used to check if transition contains channel and ipaddress params
+          resolve: {
+              parameters: ['$q', '$state','$stateParams', function ($q, $state,$stateParams) {
+                  var deferred = $q.defer();
+                 
+                  if ($stateParams.channel === null) {
+                      $state.transitionTo('homepage', {});
+                  }else{
+                      deferred.resolve();
+                  }
+  
+                  return deferred.promise;
+              }]
+          }
+        
         })
     });
 })();
